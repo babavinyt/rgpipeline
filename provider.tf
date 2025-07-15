@@ -1,4 +1,18 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "4.36.0"
+    }
+  }
+  backend "azurerm" {
+    resource_group_name  = "vineetrg"
+    storage_account_name = "dilwale090909"
+    container_name       = "vineetcont01"
+    key                  = "ram.terraform.tfstate"
 
+  }
+     }
   
   
 
